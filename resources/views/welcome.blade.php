@@ -10,6 +10,8 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
+        <link rel="stylesheet" type="text/css" href="{!! asset('plugins/bootstrap/css/bootstrap.min.css') !!}">
+
         <!-- Styles -->
         <style>
             html, body {
@@ -17,7 +19,6 @@
                 color: #636b6f;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
-                height: 100vh;
                 margin: 0;
             }
 
@@ -46,7 +47,7 @@
             }
 
             .title {
-                font-size: 84px;
+                font-size: 72px;
             }
 
             .links > a {
@@ -62,34 +63,41 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+
+            .m-t-100 {
+                margin-top: 100px;
+            }
+            .margin-top{
+                margin-top: 50px;
+                font-size: 18px;
+                font-weight: bold;
+                letter-spacing: 0.8px;
+            }
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @if (Auth::check())
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ url('/login') }}">Login</a>
-                        <a href="{{ url('/register') }}">Register</a>
-                    @endif
-                </div>
-            @endif
+        <div class="container m-t-100">
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Bienvenido a +Blogs
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a role="button" data-toggle="collapse" href="#description" aria-expanded="false" aria-controls="description">Sobre +Blogs</a>
+                    <a href="https://github.com/ovimax/masblogs" target="_blank">GitHub</a>
+
+                    <div class="collapse container" id="description">
+                        <div class="well margin-top">
+                            Crea tu blog de forma fácil y rápida, elige entra las distintas categorías y plantillas, o créalas tu mismo desde cero. Nosotros podemos a tu disposición las herramientas necesarias para que tu blog llegue a más gente.
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </body>
+    <footer>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="{!! asset('plugins/bootstrap/js/bootstrap.min.js') !!}"></script>
+    </footer>
 </html>
