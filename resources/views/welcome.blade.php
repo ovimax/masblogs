@@ -19,7 +19,6 @@
                 color: #636b6f;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
-                height: 100vh;
                 margin: 0;
             }
 
@@ -68,6 +67,12 @@
             .m-t-100 {
                 margin-top: 100px;
             }
+            .margin-top{
+                margin-top: 50px;
+                font-size: 18px;
+                font-weight: bold;
+                letter-spacing: 0.8px;
+            }
         </style>
     </head>
     <body>
@@ -83,8 +88,8 @@
                     <a href="https://github.com/ovimax/masblogs" target="_blank">GitHub</a>
 
                     <div class="collapse container" id="description">
-                        <div class="well">
-                            Crea tu blog de forma fácil y rápida, elige entra las miles de categorías y plantillas, o créalas tu mismo desde cero. Nosotros podemos a tu disposición las herramientas necesarias para que tu blog llegue a mas gente.
+                        <div class="well margin-top">
+                            Crea tu blog de forma fácil y rápida, elige entra las distintas categorías y plantillas, o créalas tu mismo desde cero. Nosotros podemos a tu disposición las herramientas necesarias para que tu blog llegue a más gente.
                         </div>
                     </div>
                 </div>
