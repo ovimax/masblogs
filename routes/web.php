@@ -11,10 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// ----- Public Routes -----
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index');
+Route::get('/', 'Publico\HomeController@home');
