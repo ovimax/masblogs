@@ -10,7 +10,7 @@
     }
 
     #news-box{
-        height: 200px;
+        height: auto;
         background-color: #ccc;
     }
 
@@ -30,6 +30,45 @@
         height: 100%;
 
     }
+    .menu-home-box{
+        background-color : #fff;
+        text-align: center;
+        font-size: 20px;
+        position: relative;
+        z-index: 10;
+        border-radius: 10px;
+        border: 2px solid black;
+        opacity: 0.9;
+        margin-top: 180px;
+        font-weight: bold;
+    }
+
+    .menu-home-box > .menu-element{
+        padding: 10px
+    }
+
+    .mensajes-box{
+        height: auto;
+        background-color: #ccc;
+        position: relative;
+        z-index: 10;
+        margin-top: 100px;
+        padding: 20px;
+        opacity: 0.8;
+    }
+    .mensaje-texto{
+        text-align: center;
+        font-style: oblique;
+        font-size: 20px;
+        
+    }
+
+    .mensaje-autor{
+        text-align: right;
+        font-weight: bold;
+        font-size: 18px;
+    }
+
 </style>
 @endsection
 
@@ -39,7 +78,9 @@
     <div id="wellcome-box">
         @include('public.home.includes.wellcome-box')
     </div>
-    <div id="news-box"></div>
+    <div id="news-box">
+        @include('public.home.includes.news-box')
+    </div>
     <div id="ranking-box"></div>
     <div id="powerby-box"></div>
 
@@ -51,7 +92,6 @@
     var anh = $(window).width();
     $('#wellcome-box').css({
         'height' : alt,
-        'padding' : '20px',
     })
 
     for (var i = 2; i >= 1; i--) {
@@ -67,7 +107,6 @@
         alt = $(window).height();
         $('#wellcome-box').css({
             'height' : alt,
-            'padding' : '20px',
         })
     })
 
