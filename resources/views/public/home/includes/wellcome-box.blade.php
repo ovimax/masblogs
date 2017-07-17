@@ -10,7 +10,7 @@
 			<div class="col-sm-3 menu-element b-r-2">+BLOGS</div>
 			<div class="col-sm-3 menu-element b-r-2">FORO</div>
 			<div class="col-sm-3 menu-element b-r-2">CREA TU BLOG</div>
-			<div class="col-sm-3 menu-element">LOGIN</div>
+			<div class="col-sm-3 menu-element"><a href="{!! route('login') !!}">LOGIN</a></div>
 
 		</div>
 

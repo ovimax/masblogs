@@ -14,3 +14,6 @@
 // ----- Public Routes -----
 
 Route::get('/', 'Publico\HomeController@home');
+
+Route::get('/login',['as'=>'login','uses'=>'LoginController@login']);
+Route::post('/login-post',['as'=>'login-post','uses'=>'LoginController@login_post']);
