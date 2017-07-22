@@ -11,10 +11,18 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// ----- Public Routes -----
+
+Route::get('/', 'Publico\HomeController@home');
+
+Route::get('/login',['as'=>'login','uses'=>'LoginController@login']);
+Route::post('/login-post',['as'=>'login-post','uses'=>'LoginController@login_post']);
+
+
+// ----- Error Routes -----
+
+Route::prefix('error')->group(function(){
+
+	Route::get('500',['as' => 'error_500','uses'=>'ErrorsController@error_500']);
+
 });
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index');
