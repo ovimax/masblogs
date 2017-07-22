@@ -42,8 +42,25 @@ class Handler extends ExceptionHandler
      * @param  \Exception  $exception
      * @return \Illuminate\Http\Response
      */
-    public function render($request, Exception $exception)
+    public function render($request, Exception $e)
     {
+        //solo redirrecionamos si el debug es false.
+        if(env('APP_DEBUG')){
+            //Verificamcos si es un error HTTP,
+            if($this->isHttpException($e)){
+                //Verificamos si existe una vista para ese error
+                if (view()->exists('errors.'.$e->getStatusCode()))
+                { 
+                    return response()->view('errors.'.$e->getStatusCode(), [], $e->getStatusCode());
+                }else{
+ 
+                   return view('errors.500');
+                }
+            }else{
+            //mostramos las vista para un error 500
+            return view('errors.500');
+            }
+        }
         return parent::render($request, $exception);
     }
 
