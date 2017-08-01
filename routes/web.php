@@ -26,3 +26,9 @@ Route::prefix('error')->group(function(){
 	Route::get('500',['as' => 'error_500','uses'=>'ErrorsController@error_500']);
 
 });
+
+
+// ----- Vista Pruebas -----
+Route::get('pruebas', function(){
+	return view('pruebas');
+});
