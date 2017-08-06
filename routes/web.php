@@ -32,3 +32,9 @@ Route::prefix('error')->group(function(){
 Route::get('pruebas', function(){
 	return view('pruebas');
 });
+
+// ----- Reports -----
+Route::post('report',function(){
+	App\Models\Reports::create(request()->all());
+	return redirect()->back()->with('status','OK');
+});

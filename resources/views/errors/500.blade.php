@@ -70,14 +70,25 @@
         </style>
     </head>
     <body>
+
+
         <div class="container-error"><div class="content container">
             <div class="row"><div class="col-sm-3 title">500</div></div>
             <div class="row">
                 <div class="message-box">
                     <p><i class="fa fa-exclamation-triangle"></i> MENUDO DESASTRE <i class="fa fa-exclamation-triangle"></i></p>
                     <span>Ha ocurrido un error inesperado</span>
+                    @if (session('status'))
+                        <span id="repost-msg">Hemos comunicado el fallo. Gracias.</span>
+                    @endif
                     <div class="row">
-                        <div class="col-sm-3 col-sm-offset-2"><button class="btn-back report">REPORT</button></div>
+
+                        {!! Form::open(['url'=>'report']) !!}
+                        {!! Form::hidden('texto', $e->getMessage()) !!}
+                        {!! Form::hidden('code',500) !!}
+                        {!! Form::hidden('url',request()->path()) !!}
+                            <div class="col-sm-3 col-sm-offset-2"><button type="submit" class="btn-back report">REPORT</button></div>
+                        {!! Form::close() !!}
                         <div class="col-sm-3 col-sm-offset-2"><button class="btn-back" onclick="window.history.go(-1); return false;">VOLVER</button></div>         
                     </div>
                 </div>

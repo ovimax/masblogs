@@ -46,7 +46,7 @@ class Handler extends ExceptionHandler
     {
 
         //solo redirrecionamos si el debug es false.
-        if(!env('APP_DEBUG')){
+        if(env('APP_DEBUG')){
             //Verificamcos si es un error HTTP,
             if($this->isHttpException($e)){
                 //Verificamos si existe una vista para ese error
@@ -55,11 +55,11 @@ class Handler extends ExceptionHandler
                     return response()->view('errors.'.$e->getStatusCode(), [], $e->getStatusCode());
                 }else{
  
-                   return response()->view('errors.500');
+                   return response()->view('errors.500',compact('e'));
                 }
             }else{
                 //mostramos las vista para un error 500
-                return response()->view('errors.500');
+                return response()->view('errors.500',compact('e'));
             }
         }
         return parent::render($request, $exception);

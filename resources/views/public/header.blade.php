@@ -11,6 +11,7 @@
 
     <!-- CSS Custom -->
     <link href="{{ asset( 'assets/css/shortcuts.css' ) }}" rel="stylesheet">
+    <link href="{{ asset( 'assets/css/logros.css' ) }}" rel="stylesheet">
 
     <!-- Styles -->
     @yield ('CSScontent')
