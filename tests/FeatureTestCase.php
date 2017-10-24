@@ -4,10 +4,12 @@ use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
-class ExampleTest extends TestCase
+class FeatureTestCase extends TestCase
 {
-    use DatabaseTransactions;
-    /**
+
+	use DatabaseTransactions;
+
+	/**
      * A basic functional test example.
      *
      * @return void
@@ -16,4 +18,10 @@ class ExampleTest extends TestCase
     {
         $this->assertTrue(true);
     }
+
+
+    function user(){
+    	return 'User';
+    }
+	
 }

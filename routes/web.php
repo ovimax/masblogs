@@ -27,6 +27,8 @@ Route::prefix('error')->group(function(){
 
 });
 
+Route::get('mi-cv','BaseController@ver_mi_cv');
+
 
 // ----- Vista Pruebas -----
 Route::get('pruebas', function(){
