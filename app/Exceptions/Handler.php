@@ -55,14 +55,14 @@ class Handler extends ExceptionHandler
                     return response()->view('errors.'.$e->getStatusCode(), [], $e->getStatusCode());
                 }else{
  
-                   return response()->view('errors.500');
+                   return response()->view('errors.500',compact('e'));
                 }
             }else{
                 //mostramos las vista para un error 500
-                return response()->view('errors.500');
+                return response()->view('errors.500',compact('e'));
             }
         }
-        return parent::render($request, $exception);
+        return parent::render($request, $e);
     }
 
     /**

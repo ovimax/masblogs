@@ -27,8 +27,16 @@ Route::prefix('error')->group(function(){
 
 });
 
+Route::get('mi-cv','BaseController@ver_mi_cv');
+
 
 // ----- Vista Pruebas -----
 Route::get('pruebas', function(){
 	return view('pruebas');
+});
+
+// ----- Reports -----
+Route::post('report',function(){
+	App\Models\Reports::create(request()->all());
+	return redirect()->back()->with('status','OK');
 });
