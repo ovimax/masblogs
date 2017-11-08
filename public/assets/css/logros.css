@@ -1,0 +1,76 @@
+@keyframes zoomIn {
+	from {
+		opacity: 0;
+		transform: scale3d(.3, .3, .3);
+	}
+
+	50% {
+		opacity: 1;
+	}
+}
+
+.animated {
+	animation-duration: 1s;
+	-webkit-animation-duration: 1s;
+	animation-fill-mode: both;
+	-webkit-animation-fill-mode: both;
+}
+
+.zoomIn {
+	animation-name: zoomIn;
+}
+
+.box-logros{
+	display: inline-flex;
+    border: 1px solid;
+    padding: 10px 35px;
+    border-radius: 50px;
+    position: absolute;
+    bottom: 200px;
+    margin: 0 auto;
+    max-width: 500px;
+    right: 0;
+    left: 0;
+    font-size: 25px;
+    cursor: pointer;
+    color: #333;
+}
+
+.data-logro{
+	display: inline-flex;
+	position: relative;
+	margin: 0 auto;
+}
+
+.img-logro{
+	height: 80px;
+	width:80px;
+}
+
+.texto-logro{
+	margin-left:20px;
+}
+
+p.titulo{
+	margin: 0;
+}
+
+.descripcion-logro{
+	margin: 0;
+}
+
+.descripcion-logro > span {
+	font-weight: bold;
+}
+
+@media (max-width:768px){
+	.img-logro{
+		height: 70px;
+		width:70px;
+	}
+	.box-logros{
+		bottom:100px;
+		max-width: 300px;
+		font-size: 20px;
+	}
+}

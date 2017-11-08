@@ -12,7 +12,4 @@ class LoginController extends Controller
         return view('public.login.desktop');
     }
 
-    public function login_post(){
-        dd('Bienvenido al Panel de control');
-    }
 }

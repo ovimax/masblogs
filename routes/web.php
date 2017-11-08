@@ -26,3 +26,17 @@ Route::prefix('error')->group(function(){
 	Route::get('500',['as' => 'error_500','uses'=>'ErrorsController@error_500']);
 
 });
+
+Route::get('mi-cv','BaseController@ver_mi_cv');
+
+
+// ----- Vista Pruebas -----
+Route::get('pruebas', function(){
+	return view('pruebas');
+});
+
+// ----- Reports -----
+Route::post('report',function(){
+	App\Models\Reports::create(request()->all());
+	return redirect()->back()->with('status','OK');
+});
