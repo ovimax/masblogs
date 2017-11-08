@@ -11,7 +11,7 @@ class BaseController extends Controller
    
 	public function ver_mi_cv()
 	{
-		$data = array();
+		$data = array('num'=>5);
 
 	//return view('pdf.mi-cv',compact('data'));
 		$pdf = PDF::loadView('pdf.mi-cv', $data);
