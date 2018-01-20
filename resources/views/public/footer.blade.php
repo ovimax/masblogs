@@ -21,8 +21,9 @@
 	</div>
 	@include('includes.logros')
     <script type="text/javascript" src="{!! asset('plugins/jquery-3.2.1.js') !!}"></script>
-    <script type="text/javascript" src="{!! asset('plugins/fontawesome-all.js') !!}"></script>
     <script type="text/javascript" src="{!! asset('plugins/bootstrap/js/bootstrap.min.js') !!}"></script>
+    <script type="text/javascript" src="{!! asset('plugins/fontawesome-all.js') !!}"></script>
+    
     <script type="text/javascript" src="{!! asset('plugins/slick/slick.min.js') !!}"></script>
     <script type="text/javascript">
 			$('.box-logros').delay(3000).fadeOut();
