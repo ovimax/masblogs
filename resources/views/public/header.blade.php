@@ -8,6 +8,8 @@
 
     <!-- CSS Plugins -->
     <link rel="stylesheet" type="text/css" href="{!! asset('plugins/bootstrap/css/bootstrap.min.css') !!}">
+    <link rel="stylesheet" type="text/css" href="{!! asset('plugins/slick/slick.css') !!}">
+    <link rel="stylesheet" type="text/css" href="{!! asset('plugins/slick/slick-theme.css') !!}">
 
     <!-- CSS Custom -->
     <link href="{{ asset( 'assets/css/shortcuts.css' ) }}" rel="stylesheet">

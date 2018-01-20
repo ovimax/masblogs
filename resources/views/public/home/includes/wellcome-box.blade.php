@@ -1,4 +1,4 @@
-<div class="wellcome-messages">
+<div class="wellcome-inbox">
 	
 	{{-- Funcion de bienevenida que se generac con cada recarga
 	$datos_vista['bienvenido'] --}}
@@ -17,8 +17,8 @@
 
 		<div class="row mensajes-box">
 			
-			<div class="col-sm-12 mensaje-texto">"Live is to short, life longer"</div>
-			<div class="col-sm-12 mensaje-autor">Unkwonn, 2013</div>
+			<div class="col-sm-12 mensaje-texto">"No temas a la perfección. Nunca la alcanzarás"</div>
+			<div class="col-sm-12 mensaje-autor">Salvador Dali</div>
 
 		</div>
 
