@@ -3,7 +3,7 @@
 	{{-- Funcion de bienevenida que se generac con cada recarga
 	$datos_vista['bienvenido'] --}}
 
-	<div class="container">
+	<div class="container" style="border-top: 1px solid transparent;">
 
 		<div class="row menu-home-box">
 			

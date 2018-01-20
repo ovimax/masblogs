@@ -40,9 +40,6 @@
         background-position: center; 
     }
 
-    .wellcome-inbox:after{
-        opacity: 0.5;
-    }
     .menu-home-box{
         background-color : #fff;
         text-align: center;
@@ -164,6 +161,7 @@
         margin-top: 30px;
         text-align: right;
     }
+    
 
 </style>
 @endsection
